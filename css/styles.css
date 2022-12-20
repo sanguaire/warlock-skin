@@ -1,0 +1,312 @@
+@font-face {
+    font-family: 'Foxbot';
+    src: url('../fonts/foxbot.woff2') format('woff2'),
+    url('../fonts/foxbot.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bodedo';
+    src: url('../fonts/HVD_Bodedo.woff2') format('woff2'),
+    url('../fonts/HVD_Bodedo.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Qarolina';
+    src: url('../fonts/Qarolina.woff2') format('woff2'),
+    url('../fonts/Qarolina.woff') format('woff');
+}
+
+body {
+    --font-primary: monospace;
+    --font-accent: "Foxbot", "Palatino Linotype", serif;
+    --font-hand: "Qarolina", serif;
+}
+
+.warlock {
+    --font-accent: "Foxbot", "Palatino Linotype", serif;
+}
+
+.warlock .header__image {
+    border-radius: 50%;
+    padding: 2px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.warlock .window-content {
+    background: url(../assets/paper.webp);
+}
+
+.warlock .header__advances {
+    flex: 0 0 30%;
+}
+
+.warlock .header__name {
+    font-size: var(--font-size-28);
+}
+
+.warlock .tabs {
+    font-size: var(--font-size-18);
+    font-weight: normal;
+    justify-content: space-between;
+}
+
+.warlock .tabs__item {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.warlock .resource__name {
+    font-family: var(--font-accent);
+    font-weight: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 5px 2px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: ghostwhite;
+}
+
+.warlock .table__header {
+    font-family: var(--font-accent);
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+    overflow-wrap: break-word;
+}
+
+.warlock .table__header-field:first-child,
+.warlock .skills__header-field:nth-child(4),
+.warlock .career-skills__header-field:nth-child(4) {
+    font-family: var(--font-accent);
+    font-size: var(--font-size-18);
+    font-weight: normal;
+}
+
+.warlock .table__entry-field,
+.warlock .field--no-decoration {
+    font-family: var(--font-primary);
+}
+
+.warlock input[name="modifier"],
+.warlock input[id="damage"] {
+    text-align: center;
+}
+
+.warlock input[type="number"].table__entry-field,
+.warlock input[type="number"].resource__value,
+.warlock input[name="modifier"],
+.warlock input[id="damage"] {
+    font-family: var(--font-hand);
+    font-size: var(--font-size-18);
+    font-style: italic;
+    color: darkblue;
+}
+
+.warlock input[type="number"].resource__value {
+    font-size: var(--font-size-20);
+}
+
+.warlock .table__entry:nth-child(even),
+.warlock .table__entry:nth-child(4n+3):not(.skills__entry):not(.career-skills__entry) {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.warlock .skills__header, .warlock .career-skills__header {
+    grid-template-columns: 3fr repeat(2, 80px) 3fr repeat(2, 80px);
+}
+
+.warlock .skills__entry, .warlock .career-skills__entry {
+    grid-template-columns: 3fr repeat(2, 80px);
+}
+
+.warlock .armour__header, .warlock .armour__entry {
+    grid-template-columns: 5fr repeat(3, 120px);
+}
+
+.warlock .spells__header, .warlock .spells__entry {
+    grid-template-columns: 5fr 100px 140px 100px;
+}
+
+.warlock .editor {
+    font-family: var(--font-primary);
+    line-height: 1.5rem;
+}
+
+.warlock .talent__name {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-14);
+}
+
+.warlock .skills__increment-button {
+    font-size: var(--font-size-14);
+    font-family: 'FontAwesome';
+}
+
+.warlock .table__entry-image {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.warlock .table__entry-field--collapsible {
+    font-family: var(--font-primary);
+}
+
+#pause figcaption {
+    font-family: var(--font-accent);
+}
+
+#pause img {
+    position: absolute;
+    top: -125px;
+    left: calc(50% - 75px);
+    height: 150px;
+    width: 150px;
+    opacity: 0.5;
+    border: none;
+    animation-name: fa-flip;
+}
+
+li.folder > .folder-header h3 {
+    font-weight: bold;
+}
+
+li.scene > h3.document-name > a {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    text-shadow: none;
+    color: var(--color-text-dark-primary);
+}
+
+.chat-message .message-header .message-sender {
+    flex: 3;
+    margin-bottom: 0.5em;
+    white-space: nowrap;
+    font-family: var(--font-accent);
+    font-size: var(--font-size-24);
+}
+
+.chat-message .message-header .flavor-text, .chat-message .message-header .whisper-to {
+    flex: 0 0 100%;
+    font-size: var(--font-size-14);
+    margin-top: 5px;
+}
+
+.warlock .biography {
+    max-height: 20rem;
+    min-height: 20rem;
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+}
+
+.warlock .biography:has(div.tox),
+.warlock .talent:has(div.tox),
+.warlock .notes-tab .grid > .flex--column:last-child:not(.talent):has(div.tox){
+	transform: none;
+}
+
+.warlock .talent {
+    min-height: 15rem;
+    max-height: 15rem;
+}
+
+.warlock .skills__entry-field:last-child, .warlock .career-skills__entry-field:last-child {
+    font-size: var(--font-size-20);
+    color: var(--color-text-dark-1)
+}
+
+.chat-message {
+    background: url(../assets/paper.webp) repeat;
+}
+
+.warlock .dialog {
+    margin-bottom: 0.2em;
+}
+
+.warlock .resource {
+    flex: 1 0 100px;
+    background: url("../assets/paper.webp");
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px lightgray solid;
+    -webkit-transform-origin: 0% 10%;
+    padding: 0px;
+    max-width: 15rem;
+}
+
+.warlock .resource:nth-child(1) {
+    transform: translate3d(0, 0, 0) rotate(2deg);
+}
+
+.warlock .resource:nth-child(2) {
+    transform: translate3d(0, 0, 0) rotate(-2deg);
+}
+
+.warlock .resource:nth-child(3) {
+    transform: translate3d(0, 0, 0) rotate(1deg);
+}
+
+.warlock .resource:nth-child(4) {
+    transform: translate3d(0, 0, 0) rotate(-3deg);
+}
+
+.warlock .skills.table {
+    transform: perspective(1px) translate3d(0, 0, 0) rotate(-0.5deg);
+    margin: 1rem;
+}
+
+.warlock .table {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px lightgray solid;
+    -webkit-transform-origin: 0% 10%;
+    background: url("../assets/paper.webp");
+
+}
+
+.warlock .tabs__item:nth-child(even) {
+    transform: translate3d(0, 0, 0) rotate(1deg);
+    -webkit-transform-origin: 0% 10%;
+}
+
+.warlock .tabs__item:nth-child(odd) {
+    transform: translate3d(0, 0, 0) rotate(-1deg);
+    -webkit-transform-origin: 0% 10%;
+}
+
+.warlock .notes-tab .grid > .flex--column:last-child:not(.talent) {
+    transform: translate3d(0, 0, 0) rotate(1deg);
+    -webkit-transform-origin: 0% 10%;
+}
+
+.warlock .notes-tab .flex--column > .flex--column,
+.warlock .notes-tab > .grid > .flex--column:last-child {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    -webkit-transform-origin: 0% 10%;
+    border: 1px solid lightgray;
+}
+
+.warlock .notes-tab h1 {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: whitesmoke;
+}
+
+.warlock .notes-tab .grid {
+    margin: 0.5rem;
+}
+
+.warlock .header {
+    border-bottom: none;
+}
+
+.warlock .header__row:last-child {
+    justify-content: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+}
+
+.warlock .grid--two-columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+}
+

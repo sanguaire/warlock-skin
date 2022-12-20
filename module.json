@@ -1,0 +1,29 @@
+{
+  "id": "warlock-skin",
+  "title": "Warlock! Skin",
+  "description": "This module is a skinning for warlock.",
+  "version": "0.1",
+  "compatibility": {
+      "minimum": "10",
+      "verified": "10"
+    },
+  "authors": [{
+      "name": "Andre K.",
+      "discord": "Sanguaire#7321",
+      "flags": {}
+    }],
+  "esmodules": ["module/warlock-skin.mjs"],
+  "scripts": [],
+  "styles": ["css/styles.css"],
+  "packs": [],
+  "languages": [],
+  "system": ["warlock"],
+  "relationships": {
+    "systems": [{
+        "id": "warlock",
+        "type": "system",
+        "compatibility": {"verified": "2.1.1"}
+    }],
+    "modules": []
+  }
+}
