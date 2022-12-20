@@ -1,19 +1,13 @@
 @font-face {
     font-family: 'Foxbot';
-    src: url('../fonts/foxbot.woff2') format('woff2'),
-    url('../fonts/foxbot.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Bodedo';
-    src: url('../fonts/HVD_Bodedo.woff2') format('woff2'),
-    url('../fonts/HVD_Bodedo.woff') format('woff');
+    src: url('../fonts/Foxbot/foxbot.woff2') format('woff2'),
+    url('../fonts/Foxbot/foxbot.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Qarolina';
-    src: url('../fonts/Qarolina.woff2') format('woff2'),
-    url('../fonts/Qarolina.woff') format('woff');
+    src: url('../fonts/Qarolina/Qarolina.woff2') format('woff2'),
+    url('../fonts/Qarolina/Qarolina.woff') format('woff');
 }
 
 body {
