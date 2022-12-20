@@ -1,4 +1,4 @@
-Hooks.once('init', () => {
+Hooks.once("init", () => {
     CONFIG.canvasTextStyle = foundry.utils.mergeObject(
         CONFIG.canvasTextStyle,
         {
@@ -34,4 +34,9 @@ Hooks.once('init', () => {
             "_leading": 0
         }
     ) ;
+});
+
+Hooks.on("renderPause", () => {
+    if ($("#pause").attr("class") !== "paused") return;
+    $("#pause.paused img").attr("src", "../assets/pause-skull.webp");
 });
