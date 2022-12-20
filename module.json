@@ -25,5 +25,8 @@
         "compatibility": {"verified": "2.1.1"}
     }],
     "modules": []
-  }
+  },
+  "url": "https://github.com/sanguaire/warlock-skin/",
+  "manifest": "https://raw.githubusercontent.com/sanguaire/warlock-skin/main/module.json",
+  "download": "https://github.com/sanguaire/warlock-skin/releases/download/v0.1/warlock-skin-v0.1.zip"
 }
