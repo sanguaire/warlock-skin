@@ -37,6 +37,5 @@ Hooks.once("init", () => {
 });
 
 Hooks.on("renderPause", () => {
-    if ($("#pause").attr("class") !== "paused") return;
-    $("#pause.paused img").attr("src", "../assets/pause-skull.webp");
+    $(".paused img").attr("src", "modules/warlock-skin/assets/pause-skull.webp");
 });
